@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/currentWeatherFragment">
+
+    <fragment
+        android:id="@+id/currentWeatherFragment"
+        android:name="com.example.forecastapp.userinterface.weather.current.CurrentWeatherFragment"
+        android:label="current_weather_fragment"
+        tools:layout="@layout/current_weather_fragment" />
+    <fragment
+        android:id="@+id/nextDaysWeatherFragment"
+        android:name="com.example.forecastapp.userinterface.weather.nextdays.nextdaysweather.NextDaysWeatherFragment"
+        android:label="next_day_weather_fragment"
+        tools:layout="@layout/next_days_weather_fragment">
+        <action
+            android:id="@+id/actionDetail"
+            app:destination="@id/nextDaysDetailWeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextDaysDetailWeatherFragment"
+        android:name="com.example.forecastapp.userinterface.weather.nextdays.detail.NextDaysDetailFragment"
+        android:label="next_days_detail_weather_fragment"
+        tools:layout="@layout/next_days_detail_fragment">
+        <argument
+            android:name="dateString"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.forecastapp.userinterface.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
