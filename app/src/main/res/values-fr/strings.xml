@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">forecastApp</string>
+    <string name="today_bottom_nav">Aujourd'hui</string>
+    <string name="_7_days_bottom_nav">7 Jour</string>
+    <string name="settings_bottom_nav">Paramètres</string>
+</resources>
